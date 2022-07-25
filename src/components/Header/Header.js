@@ -3,10 +3,11 @@ import {
   Nav, 
   Logo, 
   NavMenu, 
-  HeaderLoginButton
+  UserImage
 } from "./styles";
 import logo from "../../images/logo.svg";
-import { FiHome } from 'react-icons/fi';
+import user from "../../images/user.jpeg";
+import { FiHome, FiSearch, FiPlus, FiAward, FiTv, FiVideo } from 'react-icons/fi';
 
 export const Header = () => {
   return (
@@ -14,31 +15,31 @@ export const Header = () => {
       <Logo src={logo} />
       <NavMenu>
         <a href="/">
-          <FiHome />
+          <FiHome color="white" />
           <span>HOME</span>
         </a>
         <a href="/">
-          <FiHome />
+          <FiSearch color="white" />
           <span>SEARCH</span>
         </a>
         <a href="/">
-          <FiHome />
+          <FiPlus color="white" />
           <span>WATCHLIST</span>
         </a>
         <a href="/">
-          <FiHome />
+          <FiAward color="white" />
           <span>ORIGINALS</span>
         </a>
         <a href="/">
-          <FiHome />
+          <FiVideo color="white" />
           <span>MOVEIS</span>
         </a>
         <a href="/">
-          <FiHome />
+          <FiTv color="white" />
           <span>SERIES</span>
         </a>
       </NavMenu>
-      <HeaderLoginButton>LOGIN</HeaderLoginButton>
+      <UserImage src={user} />
     </Nav>
   )
 };
