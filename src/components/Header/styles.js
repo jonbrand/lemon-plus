@@ -60,9 +60,6 @@ export const NavMenu = styled.div`
       }
     }
   }
-
-  
-
 `;
 
 export const UserImage = styled.img`
