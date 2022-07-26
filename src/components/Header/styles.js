@@ -16,6 +16,8 @@ export const NavMenu = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
+
+  margin-left: 1rem;
   
   a {
     display: flex;
@@ -46,6 +48,8 @@ export const NavMenu = styled.div`
         bottom: -6px;
         opacity: 0;
         transform: scaleX(0);
+        transform-origin: left center;
+        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
       }
     }
 
