@@ -5,6 +5,8 @@ export const Container = styled.main`
   padding: 0 calc(3.5vw + 5px);
   position: relative;
 
+  overflow-x: hidden;
+
   color: white;
   &:before {
     background-image: linear-gradient(180deg, #040714, #363636);
