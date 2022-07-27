@@ -4,6 +4,7 @@ export const Nav = styled.div`
   height: 70px;
   background: #2B2245;
   display: flex;
+  
   align-items: center;
   padding: 0 36px;
 `;
