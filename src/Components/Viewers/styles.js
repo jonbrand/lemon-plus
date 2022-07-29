@@ -23,6 +23,8 @@ export const Wrap = styled.div`
   font-family: 'Condiment', cursive;
   font-size: 32px;
 
+  color: var(--grey-medium);
+
   &:hover {
     transform: scale(1.05);
     box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,

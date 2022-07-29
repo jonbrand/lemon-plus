@@ -4,15 +4,16 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import './App.css';
 import { Header } from './Components/Header/Header';
 import { Home } from './Pages/Home/Home';
 import { Detail } from './Pages/Detail/Detail';
 import { Login } from './Pages/Login/Login';
+import { GlobalStyle } from './styles/global';
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <GlobalStyle />
       <Router>
         <Header />
         <Routes>
@@ -21,7 +22,7 @@ function App() {
           <Route path="/detail" element={ <Detail /> } />
         </Routes>
       </Router>
-    </div>
+    </>
   );
 }
 

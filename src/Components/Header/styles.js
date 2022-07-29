@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Nav = styled.div`
   height: 70px;
-  background: #2B2245;
+  background: var(--purple-dark);
   display: flex;
   
   align-items: center;
@@ -26,7 +26,7 @@ export const NavMenu = styled.div`
     padding: 0 12px;
 
     text-decoration: none;
-    color: #c0c0c0;
+    color: var(--grey-medium);
     cursor: pointer;
 
     span {
@@ -40,7 +40,7 @@ export const NavMenu = styled.div`
       &:after {
         content: "";
         height: 2px;
-        background: #FFF;
+        background: var(--green);
 
         position: absolute;
         left: 0;

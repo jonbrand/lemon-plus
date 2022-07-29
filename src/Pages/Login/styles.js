@@ -70,7 +70,7 @@ export const SignUp = styled.a`
 `;
 
 export const Description = styled.p`
-  color: #00ED82;
+  color: var(--green);
   font-family: 'Oswald', sans-serif;
 `;
 

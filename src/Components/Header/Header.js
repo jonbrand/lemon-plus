@@ -15,27 +15,27 @@ export const Header = () => {
       <Logo src={logo} />
       <NavMenu>
         <a href="/">
-          <FiHome color="white" />
+          <FiHome color="grey" />
           <span>HOME</span>
         </a>
         <a href="/">
-          <FiSearch color="white" />
+          <FiSearch color="grey" />
           <span>SEARCH</span>
         </a>
         <a href="/">
-          <FiPlus color="white" />
+          <FiPlus color="grey" />
           <span>WATCHLIST</span>
         </a>
         <a href="/">
-          <FiAward color="white" />
+          <FiAward color="grey" />
           <span>ORIGINALS</span>
         </a>
         <a href="/">
-          <FiVideo color="white" />
+          <FiVideo color="grey" />
           <span>MOVEIS</span>
         </a>
         <a href="/">
-          <FiTv color="white" />
+          <FiTv color="grey" />
           <span>SERIES</span>
         </a>
       </NavMenu>

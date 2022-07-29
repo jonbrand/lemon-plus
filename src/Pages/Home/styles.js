@@ -9,7 +9,7 @@ export const Container = styled.main`
 
   color: white;
   &:before {
-    background-image: linear-gradient(180deg, #040714, #363636);
+    background-color: var(--background);
     content: "";
     position: absolute;
     top: 0;

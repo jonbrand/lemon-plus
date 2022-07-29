@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  margin-top: 20px;
+
   h4 {
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 20px;
+
+    color: var(--grey-medium);
   }
 `;
 
