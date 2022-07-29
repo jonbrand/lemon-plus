@@ -5,9 +5,10 @@ import {
   Routes
 } from "react-router-dom";
 import './App.css';
-import { Header } from './components/Header/Header';
+import { Header } from './Components/Header/Header';
 import { Home } from './Pages/Home/Home';
-import { Detail } from './components/Detail/Detail';
+import { Detail } from './Pages/Detail/Detail';
+import { Login } from './Pages/Login/Login';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={ <Home /> } />
+          <Route path="/login" element={ <Login /> } />
           <Route path="/detail" element={ <Detail /> } />
         </Routes>
       </Router>
