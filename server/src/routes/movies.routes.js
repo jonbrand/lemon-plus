@@ -3,18 +3,29 @@ const router = express.Router();
 const Movie = require("../models/movie");
 
 
-router.get("/", (req, res) => {
-  return res.json({ message: "Pegar todos os registros!"});
+router.get("/", async (req, res) => {
+  try {
+    const movies = await Movie.find({});
+
+    res.json({ error: false, movies });
+  } catch (err) {
+    res.json({ error: true, message: err.message });
+  }
 });
 
-router.get("/:id", (req, res) => {
-  const id = req.params.id;
+router.get("/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
 
-  res.json({ message: `Pegar somente o registo com o ID: ${id}`});
+    const movie = await Movie.findById(id);
+
+    res.json({ error: false, movie });
+  } catch (err) {
+    res.json({ error: true, message: err.message });
+  }
 });
 
 router.post("/", async (req, res) => {
-  
   try {
     const movie = req.body;
     const response = await new Movie(movie).save();
@@ -28,16 +39,29 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.put('/:id', (req, res) => {
-  const id = req.params.id;
+router.put('/:id', async (req, res) => {
+  try {
+    const id = req.params.id;
+    
+    const updateMovie = req.body;
 
-  res.json({ message: `Atualizar somente o resgistro com o ID: ${id}`});
+    const movie = await Movie.findByIdAndUpdate(id, updateMovie);
+
+    res.json({ error: false, movie });
+  } catch (err) {
+    res.json({ error: true , message: err.message });
+  }
 });
 
-router.delete('/:id', (req, res) => {
-  const id = req.params.id;
-
-  res.json({ message: `Deletar somente o registro com o ID: ${id}`});
+router.delete('/:id', async (req, res) => {
+  try {
+    const id = req.params.id;
+    await Movie.findByIdAndDelete(id);
+    
+    res.json({ error: false, message: 'Filme deletado' });
+  } catch {
+    res.json({ error: true, message: err.message });
+  }
 });
 
 module.exports = router;
