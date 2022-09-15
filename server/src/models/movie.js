@@ -5,6 +5,22 @@ const Movie = mongoose.model('Movie', {
     type: String,
     required: true,
   },
+  type: {
+    type: String,
+    required: true,
+  },
+  frontCover: {
+    type: String,
+    required: true,
+  },
+  logo: {
+    type: String,
+    required: true,
+  },
+  thumb: {
+    type: String,
+    required: true,
+  },
   genre: {
     type: String,
     required: true,
@@ -15,6 +31,10 @@ const Movie = mongoose.model('Movie', {
   },
   description: {
     type: String,
+    required: true,
+  },
+  performer: {
+    type: Array,
     required: true,
   },
   time: {
