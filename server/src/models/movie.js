@@ -33,10 +33,6 @@ const Movie = mongoose.model('Movie', {
     type: String,
     required: true,
   },
-  performer: {
-    type: Array,
-    required: true,
-  },
   time: {
     type: String,
     required: true,
