@@ -1,6 +1,38 @@
 const express = require("express");
 const router = express.Router();
+const _ = require('underscore');
 const Movie = require("../models/movie");
+const Season = require("../models/season");
+
+router.get('/home', async (req, res) => {
+  try {
+    let movies = await Movie.find({});
+    let finalMovies = [];
+
+    for (let movie of movies){
+      const seasons = await Season.find({
+        movie_id: movie._id,
+      });
+
+      const newMovie = { ...movie._doc, seasons };
+
+      finalMovies.push(newMovie);
+    }
+    // misturar resultados aleatoriamente
+    finalMovies = _.shuffle(finalMovies);
+
+    // filme principal
+    const main = finalMovies[0];
+
+    // separar em seções
+    const sections = _.chunk(finalMovies, 5);
+
+    res.json({ error: false, main, sections })
+
+  } catch (err) {
+    res.json({ error: true, message: err.message });
+  }
+})
 
 router.get("/", async (req, res) => {
   try {

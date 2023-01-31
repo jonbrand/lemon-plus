@@ -9,5 +9,16 @@
     "genre": "ficção científica",
     "time": "01h50min",
     "year": 1972
+  },
+  {
+    "title": "Os Simpsons",
+    "type": "serie",
+    "frontCover": "https://imgur.com/y91Unmj",
+    "logo": "logo",
+    "thumb": "thumb",
+    "description": "“Os Simpsons” é uma animação que gira em torno de uma família de mesmo nome que vive na pequena Springfield: o pai, Homer; a mãe Marge; e os filhos Bart, Lisa e Maggie. A animação é considerada a de maior longevidade da história da TV. A série foi criada por Matt Groening para a Fox.",
+    "genre": "comedia",
+    "time": "01h50min",
+    "year": 1989
   }
 ]
